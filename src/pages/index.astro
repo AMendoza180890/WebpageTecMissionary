@@ -1,5 +1,6 @@
 ---
 import Layout from "~/layouts/Layout.astro";
+import LogoCloud from "~/components/LogoCloud.astro";
 import Section from "~/components/Section.astro";
 import Hero from "~/components/Hero.astro";
 import { Picture, Image } from "astro:assets";
@@ -123,7 +124,7 @@ import Mussels from "~/assets/images/mussels2.png";
     </Grid>
   </Section>
 
-  <Section class:list={"bg-white"}>
+  <!-- <Section class:list={"bg-white"}>
     <Hero>
       <div slot="hero-content-left" class="prose lg:order-2">
         <h1 class="font-black">Pizza</h1>
@@ -204,34 +205,13 @@ import Mussels from "~/assets/images/mussels2.png";
         />
       </div>
     </Hero>
-  </Section>
+  </Section> -->
 
   <!-- Reviews -->
-  <Section class:list={"bg-brand-red/20 relative"}>
+  <Section class:list={"bg-brand-green relative"}>
     <div class="py-16">
-      <Hero>
-        <div slot="hero-content-left" class="prose max-w-none order-2">
-          <h2 slot="heading-title" class="font-black h4 text-center mt-0 mb-4">
-            What our customers say...
-          </h2>
-          <div slot="heading-content">
-            <p class="text-center">
-              Don't just take our word for it. Read what our customers have to
-              say about their dining experience at our restaurant.
-            </p>
-
-            <ReviewSlider />
-          </div>
-        </div>
-
-        <div slot="hero-content-right">
-          <Picture
-            src={reviewAuthors}
-            alt="Review authors"
-            class="w-full h-auto"
-          />
-        </div>
-      </Hero>
+      <LogoCloud title="As featured in" />
+      <Heading>
     </div>
 
     <svg
