@@ -21,7 +21,7 @@ To get started with AstroPie, follow these steps:
 1. **Clone AstroPie**:
 
     ```sh
-    git clone https://github.com/wpinfusion/AstroPie.git
+    git clone https://github.com/AMendoza180890/WebpageTecMissionary.git
     ```
 
 2. **Install Dependencies**:
