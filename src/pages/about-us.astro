@@ -1,88 +1,93 @@
 ---
 import Layout from "~/layouts/Layout.astro";
 import Section from "~/components/Section.astro";
+import Article from "~/components/Article.astro";
+//eliminar
 import Hero from "~/components/Hero.astro";
 import { Picture } from "astro:assets";
 import Badge from "~/components/Badge.astro";
-import Button from "~/components/Button.astro";
-import ButtonCallUs from "~/components/ButtonCallUs.astro";
-import Article from "~/components/Article.astro";
+// import Button from "~/components/Button.astro";
+// import ButtonCallUs from "~/components/ButtonCallUs.astro";
 
 // Images
-import PizzaHero from "~/assets/images/pizza-hero.png";
+import AboutUsHeader from "~/assets/img/aboutUs-header.jpg";
 ---
 
 <Layout>
-	<Section class:list={"bg-white"}>
-		<Hero>
-			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
-				<Badge title="il ristorante italiana" />
-				<h1 class="font-black">Real Italian food in a real Italian restaurant...</h1>
+  <Section class:list={"bg-white"}>
+    <Hero>
+      <div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
+        <h1 class="font-black">
+          God-given talents, given back to Him through service
+        </h1>
 
-				<p>
-					Experience the taste of Italy with our authentic dishes made from the finest ingredients. Indulge in
-					our wide variety of pizzas, pastas, and desserts, all crafted with love and tradition. Whether
-					you're dining in or taking out, we promise a memorable culinary experience.
-				</p>
+        <p>
+          Connecting tech and media talents with ministry impact, empowering
+          nonprofits to accelerate positive change globally. Partnering with
+          nonprofit ministries around the world to provide general tech,
+          web-development, photography, and media support.
+        </p>
 
-				<span class="text-brand-green font-medium">✔ We also deliver</span>
+		<Badge title="#MissionaryTechSupport" />
 
-				<div class="mt-8 flex items-center gap-x-8">
-					<Button url="/book">Book now</Button>
-					<ButtonCallUs />
-				</div>
-			</div>
-			<div slot="hero-content-right">
-				<Picture
-					class:list={"mx-auto"}
-					src={PizzaHero}
-					height={600}
-					formats={["avif", "webp"]}
-					alt="A description of my image."
-					loading={"eager"}
-					fetchpriority={"high"}
-				/>
-			</div>
-		</Hero>
-	</Section>
+      </div>
+      <div slot="hero-content-right">
+        <Picture
+          class:list={"mx-auto"}
+          src={AboutUsHeader}
+          height={600}
+          formats={["avif", "webp"]}
+          alt="A description of my image."
+          loading={"eager"}
+          fetchpriority={"high"}
+          style={{
+            border: "2px solid white",
+            borderRadius: "10px"
+          }}
+        />
+      </div>
+    </Hero>
+  </Section>
 
-	<Section class:list={'bg-white'}>
-		<Article>
-			<h2>Welcome to AstroPie</h2>
-			<p>
-				Nestled in the heart of the city, <strong>AstroPie</strong> offers an authentic Italian dining experience
-				like no other. From the moment you step through our doors, you'll be transported to the vibrant streets of
-				Italy, where good food and great company are at the center of life.
-			</p>
+  <Section class:list={"bg-white"}>
+    <Article>
+      <h2>Our Story</h2>
+      <p>
+        Our team is made up of a husband and wife duo, called to serve the Lord
+        by serving His people. We believe that the Lord will use our skills to
+        empower His ministries around the world.
+      </p>
+      <p>
+        Allan, a Nicaraguan native, studied Computer Sciences at the University
+        of Managua, going on to co-create WebNica, a company dedicated to
+        support companies throughout the Americas with web development. He also
+        served as the Head of Technology for a Christian nonprofit called
+        Tesoros de Dios, God’s Treasures where he created websites, managed
+        online fundraising campaigns, hosted webinars, and taught teenagers with
+        disabilities computer skills.
+      </p>
+      <p>
+        Kaley has a background in missions, photojournalism, and non-profit
+        development. She traveled through Central America, Eastern Europe, and
+        South Africa as part of a one year missionary program, serving as the
+        photojournalist for the organization. She is passionate about creating
+        content for ministries to send to supporters, bringing stories to life
+        to spark passion in readers, and telling the Church of all the Lord is
+        doing globally as an encouragement that He is still on the move as He
+        was in Biblical days.
+      </p>
+      <p>
+        We met while serving neighboring nonprofits in Managua, Nicaragua and
+        have been serving together ever since. We are passionate about bringing
+        encouragement and teachable skills to ministries around the world. Our
+        goal is to use our gifts to help bring about a lasting change on a
+        global level, all for the glory of God.
+      </p>
 
-			<h3>Our Story</h3>
-			<p>
-				Founded in <em>1998</em>, our family-owned restaurant has always been a labor of love. Inspired by the
-				recipes passed down through generations, we bring the <u>rich culinary heritage</u> of Italy to your plate.
-				Every dish tells a story, and every meal is a celebration of flavor.
-			</p>
-
-			<h3>Our Philosophy</h3>
-			<blockquote>"The secret ingredient is always love."</blockquote>
-			<p>
-				At AstroPie, we believe in the simple joy of fresh ingredients, time-honored techniques, and a
-				passion for creating memorable meals. From our hand-rolled pasta to our wood-fired pizzas, every bite is
-				crafted with care.
-			</p>
-
-			<h4>What Makes Us Special?</h4>
-			<ul>
-				<li><strong>Authenticity:</strong> Traditional recipes, just like Nonna used to make.</li>
-				<li><strong>Fresh Ingredients:</strong> Locally sourced produce and imported Italian staples.</li>
-				<li><strong>Warm Atmosphere:</strong> A place where everyone feels like family.</li>
-			</ul>
-
-			<h3>Join Us</h3>
-			<p>
-				Whether you're celebrating a special occasion or simply indulging in the pleasures of Italian cuisine, <strong
-					>AstroPie</strong
-				> is the perfect destination. <em>Come for the food, stay for the memories.</em>
-			</p>
-		</Article>
-	</Section>
+      <h3>Join Us</h3>
+      <p>
+        We invite you to be part of this exciting journey of faith and service. Together, we can empower ministries, amplify their stories, and share the incredible work God is doing around the world. Whether through prayer, collaboration, or support, your involvement helps extend the reach of technology and creativity to those serving on the frontlines. Join us as we use our gifts to make a lasting impact — for His glory and the growth of His Kingdom.
+      </p>
+    </Article>
+  </Section>
 </Layout>

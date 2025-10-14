@@ -1,10 +1,12 @@
 // Global variables
 export const siteLang = "en-US";
 export const siteCurrency = "USD";
-export const siteDomain = "astropie.com";
-export const siteName = "AstroPie";
-export const siteSlogan = "The best pies in the galaxy!";
+export const siteDomain = "missionarytechsupport.com";
+export const siteName = "Missionary Tech Support";
+export const siteSlogan = "Supporting those most in need";
 export const themeColor = "#FF0000";
+export const firstTitle = "Missionary";
+export const secondTitle = "Tech Support";
 
 export const phone = {
 	href: "tel:+123456789",

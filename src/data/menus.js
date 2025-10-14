@@ -5,18 +5,18 @@ export const menuMain = [
         highlighted: false,
     },
     {
-        name: "Menu",
-        url: "/menu",
-        highlighted: false,
-    },
-    {
         name: "About Us",
         url: "/about-us",
         highlighted: false,
     },
     {
-        name: "Gallery",
-        url: "/gallery",
+        name: "Host info",
+        url: "/hostInfo",
+        highlighted: false,
+    },
+    {
+        name: "Stories",
+        url: "/stories",
         highlighted: false,
     },
     {
@@ -25,8 +25,8 @@ export const menuMain = [
         highlighted: false,
     },
     {
-        name: "Book",
-        url: "/book",
+        name: "Donate",
+        url: "/donate",
         highlighted: true,
     },
 ];
