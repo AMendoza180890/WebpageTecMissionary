@@ -1,16 +1,16 @@
 ---
 import Layout from "~/layouts/Layout.astro";
-import LogoCloud from "~/components/LogoCloud.astro";
+import Logocloud from "~/components/logoCloud.astro";
 import Section from "~/components/Section.astro";
 import Hero from "~/components/Hero.astro";
 import { Picture, Image } from "astro:assets";
-//import Badge from "~/components/Badge.astro";
 import Button from "~/components/Button.astro";
-//import ButtonCallUs from "~/components/ButtonCallUs.astro";
 import Grid from "~/components/Grid.astro";
 import Heading from "~/components/Heading.astro";
 import WideImage from "~/components/WideImage.astro";
 import ReviewSlider from "~/components/ReviewSlider.astro";
+//import ButtonCallUs from "~/components/ButtonCallUs.astro";
+//import Badge from "~/components/Badge.astro";
 
 // Images
 import slide from "~/assets/img/group-friends-planning-trip-cafe.jpg";
@@ -20,8 +20,8 @@ import photographyMedia from "~/assets/img/photography-media.jpg";
 // Image to remplace
 import PizzaHero from "~/assets/images/pizza-hero.png";
 import reviewAuthors from "~/assets/images/review-authors.png";
-import Dessert from "~/assets/images/dessert.png";
 import Mussels from "~/assets/images/mussels2.png";
+import Dessert from "~/assets/images/dessert.png";
 ---
 
 <Layout
@@ -69,10 +69,10 @@ import Mussels from "~/assets/images/mussels2.png";
       <div slot="grid-content-1">
         <div class="flex flex-col items-center prose text-center">
           <Picture
-            class:list={"not-prose w-full h-auto"}
+            class:list={"not-prose w-full h-auto gridImg"}
             src={itSupport}
             formats={["avif", "webp"]}
-            alt="A description of my image."
+            alt="IT support"
           />
           <h3 class="h4 mt-0 font-black">IT Support</h3>
           <p>
@@ -88,10 +88,10 @@ import Mussels from "~/assets/images/mussels2.png";
       <div slot="grid-content-2">
         <div class="flex flex-col items-center prose text-center">
           <Picture
-            class:list={"not-prose w-full h-auto"}
+            class:list={"not-prose w-full h-auto gridImg"}
             src={webDeveloper}
             formats={["avif", "webp"]}
-            alt="A description of my image."
+            alt="Web Development"
           />
           <h3 class="h4 mt-0 font-black">Web Development</h3>
           <p>
@@ -106,10 +106,10 @@ import Mussels from "~/assets/images/mussels2.png";
       <div slot="grid-content-3">
         <div class="flex flex-col items-center prose text-center">
           <Picture
-            class:list={"not-prose w-full h-auto"}
+            class:list={"not-prose w-full h-auto gridImg"}
             src={photographyMedia}
             formats={["avif", "webp"]}
-            alt="A description of my image."
+            alt="Photography and media"
           />
           <h3 class="h4 mt-0 font-black">Photography & Media</h3>
           <p>
@@ -207,11 +207,10 @@ import Mussels from "~/assets/images/mussels2.png";
     </Hero>
   </Section> -->
 
-  <!-- Reviews -->
+  <!-- Logos -->
   <Section class:list={"bg-brand-green relative"}>
-    <div class="py-16">
-      <LogoCloud title="As featured in" />
-      <Heading>
+    <div class="py-0">
+      <Logocloud title="Our Partners" />
     </div>
 
     <svg
@@ -314,3 +313,10 @@ import Mussels from "~/assets/images/mussels2.png";
     </Hero>
   </Section>
 </Layout>
+
+<style>
+  .gridImg {
+    border: 1px solid white;
+    border-radius: 10px;
+  }
+</style>
