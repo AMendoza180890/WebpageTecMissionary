@@ -1,6 +1,8 @@
 ---
+import {Image} from "astro:assets";
+import logoImagen from "~/assets/images/logoMTS.png";
 import { menuMain } from "~/data/menus.js";
-import { firstTitle, secondTitle } from "~/data/config";
+// import { firstTitle, secondTitle } from "~/data/config";
 
 const rmTrailingSlash = (path: string): string => {
   return path.endsWith("/") && path.length > 1 
@@ -15,7 +17,8 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 	<div class="container py-6">
 		<nav class="flex items-center justify-between" aria-label="Global">
 			<a href="/" class="-m-1.5 p-1.5">
-				<p class="font-bold text-4xl text-brand-green">{firstTitle}<span class="text-brand-red bg-brand-red/5 px-3 ml-1 rounded-lg">{secondTitle}</span></p>
+				<!-- <p class="font-bold text-4xl text-brand-green">{firstTitle}<span class="text-brand-red bg-brand-red/5 px-3 ml-1 rounded-lg">{secondTitle}</span></p> -->
+				 <Image src={logoImagen} class="w-40 h-38" alt="Missionary Tech Support Logo">
 			</a>
 			<div class="flex lg:hidden">
 				<button
@@ -67,7 +70,8 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 			>
 				<div class="flex items-center justify-between">
 					<a href="/" class="-m-1.5 p-1.5">
-						<p class="font-bold text-4xl text-brand-green">Astro<span class="text-brand-red">Pie</span></p>
+						<Image src={logoImagen} class="w-40 h-38" alt="Missionary Tech Support Logo"></Image>
+						<!-- <p class="font-bold text-4xl text-brand-green">Astro<span class="text-brand-red">Pie</span></p> -->
 					</a>
 					<button type="button" class="-m-2.5 p-2.5 text-brand-red" @click="open = false">
 						<span class="sr-only">Close menu</span>

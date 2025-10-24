@@ -1,4 +1,6 @@
 ---
+import logoImagen from "~/assets/images/logoMTS.png";
+import {Image} from "astro:assets";
 import { menuMain } from "~/data/menus";
 const currentYear = new Date().getFullYear();
 import { siteName, firstTitle, secondTitle } from "~/data/config";
@@ -6,8 +8,9 @@ import { siteName, firstTitle, secondTitle } from "~/data/config";
 ---
 
 <footer class="bg-brand-green text-white">
-	<div class="container pt-16 pb-8">
-		<p class="text-center font-bold text-4xl text-white">{firstTitle}<span class="text-brand-red bg-white px-3 ml-1 rounded-lg">{secondTitle}</span></p>
+	<div class="container pt-10 pb-8">
+		<Image src={logoImagen} class="flex flex-col sm:flex-row items-center justify-center mx-auto w-40 h-38" alt="Missionary Tech Support Logo" />
+		<!-- <p class="text-center font-bold text-4xl text-white">{firstTitle}<span class="text-brand-red bg-white px-3 ml-1 rounded-lg">{secondTitle}</span></p> -->
 		<nav class="flex flex-col sm:flex-row items-center justify-center gap-x-12 gap-y-3 font-medium mt-6" aria-label="Footer">
 			{
 				menuMain.map((item) => (
