@@ -17,7 +17,7 @@ export default defineConfig({
 		}),
 		mdx(),
 	],
-	output: "static",
+	output: "server",
 	devToolbar: {
 		enabled: false,
 	},

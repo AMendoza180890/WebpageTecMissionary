@@ -24,14 +24,9 @@ import { siteLang, themeColor } from "~/data/config";
 			rel="apple-touch-icon"
 			sizes="180x180"
 			href="/images/favicon/apple-touch-icon.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="/images/favicon/favicon-32x32.png"
-		/>
-		<link
+		/> -->
+		<link rel="icon" href={`${baseUrl}/src/assets/icons/MTS.ico`} />
+		<!-- <link
 			rel="icon"
 			type="image/png"
 			sizes="16x16"
@@ -48,7 +43,7 @@ import { siteLang, themeColor } from "~/data/config";
 		<meta property="og:url" content={Astro.url} />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title} />
-		<meta property="og:image" content={`${baseUrl}/images/og-image.jpg`} />
+		<meta property="og:image" content={`${baseUrl}/images/logoMTS-og.png`} />
 		<meta property="og:description" content={description} />
 		<meta property="og:site_name" content="WP Infusion" />
 		<meta property="og:locale" content={siteLang} />
@@ -57,7 +52,7 @@ import { siteLang, themeColor } from "~/data/config";
 		<meta name="twitter:url" content={Astro.url} />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
-		<!-- <meta name="twitter:image" content={`${baseUrl}/images/og-image.jpg`} /> -->
+		<meta name="twitter:image" content={`${baseUrl}/images/logoMTS-og.png`} />
 		<title>{pageTitle}</title>
 		<ClientRouter />
 		<ViewTransitions />
