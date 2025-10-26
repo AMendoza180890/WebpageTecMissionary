@@ -5,23 +5,32 @@ import alpinejs from "@astrojs/alpinejs";
 import playformInline from "@playform/inline";
 import mdx from "@astrojs/mdx";
 
+import vercel from "@astrojs/vercel/serverless";
+
 // https://astro.build/config
 export default defineConfig({
-	site: "https://missionarytechsupport.org",
-	base: "/",
-	// trailingSlash: 'always',
-	integrations: [
-		alpinejs(),
-		playformInline({
-			Beasties: true,
-		}),
-		mdx(),
+  site: "https://missionarytechsupport.org",
+  base: "/",
+
+  // trailingSlash: 'always',
+  integrations: [
+      alpinejs(),
+      playformInline({
+          Beasties: true,
+      }),
+      mdx(),
 	],
-	output: "server",
-	devToolbar: {
-		enabled: false,
+
+  output: 'server',
+  adapter: vercel({
+      webStream: true
+  }),
+
+  devToolbar: {
+      enabled: false,
 	},
-	vite: {
-		plugins: [tailwindcss()],
+
+  vite: {
+      plugins: [tailwindcss()],
 	},
 });
