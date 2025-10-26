@@ -4,8 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import alpinejs from "@astrojs/alpinejs";
 import playformInline from "@playform/inline";
 import mdx from "@astrojs/mdx";
-
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,10 +21,8 @@ export default defineConfig({
 	],
 
   output: 'server',
-  adapter: vercel({
-      webStream: true
-  }),
-
+  adapter: vercel(),
+  
   devToolbar: {
       enabled: false,
 	},
@@ -33,4 +30,5 @@ export default defineConfig({
   vite: {
       plugins: [tailwindcss()],
 	},
+
 });
