@@ -1,12 +1,22 @@
 ---
+import { actions } from "astro:actions";
+
+const result = Astro.getActionResult(actions.send);
+if (result?.data) {
+    Astro.redirect("/");
+}
+
+if (result?.error){
+    console.error("Action Error:", result.error);
+}
 ---
 
-
+<form action={actions.send} method="post">
     <div class="flex flex-col gap-8 mx-auto max-w-md">
         <div>
             <label for="name">Name</label>
             <div class="mt-2">
-                <input type="text" name="name" id="name" required />
+                <input type="text" name="name" id="name"  required />
             </div>
         </div>
 
@@ -25,7 +35,7 @@
         </div>
 
         <div>
-            <form action="API/email">
+            
             <button type="submit" class="button button-green group !px-8">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -43,6 +53,6 @@
                 </svg>
                 Send
             </button>
-        </form>
         </div>
     </div>
+</form>
