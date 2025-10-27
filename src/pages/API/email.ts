@@ -21,6 +21,6 @@ export const GET: APIRoute = async () => {
     if (error) {
         return new Response(JSON.stringify(error));
     }
-
+    //return Response.redirect("/");
     return new Response(JSON.stringify(data))
 };
