@@ -1,12 +1,9 @@
 import {
   Body,
-  Button,
   Container,
   Head,
   Html,
   Img,
-  Link,
-  Preview,
   Section,
   Text,
 } from '@react-email/components';
@@ -47,7 +44,7 @@ export const GithubAccessTokenEmail = ({
         <Section style={section}>
           <Text style={text}>
             <strong>Name: </strong> {username} <br />
-            <strong>Email: </strong> {email} <br />
+            <strong>Email: </strong> <a href={`mailto:${email}`}>{email}</a> <br />
             <strong>Message: </strong> {message}
           </Text>
           
