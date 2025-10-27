@@ -20,8 +20,8 @@ export const server = {
             const text = await render(emailContent, { plainText: true });
             // send an email
             const {data, error} = await resend.emails.send({
-                from: 'Acme <onboarding@resend.dev>',
-                to: [email],
+                from: import.meta.env.RESEND_EMAIL_FROM,
+                to: [import.meta.env.RESEND_EMAIL_TO],
                 subject: 'website contact form',
                 html,
                 text,
