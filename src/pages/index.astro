@@ -8,7 +8,7 @@ import Button from "~/components/Button.astro";
 import Grid from "~/components/Grid.astro";
 import Heading from "~/components/Heading.astro";
 import WideImage from "~/components/WideImage.astro";
-import ReviewSlider from "~/components/ReviewSlider.astro";
+// import ReviewSlider from "~/components/ReviewSlider.astro";
 //import ButtonCallUs from "~/components/ButtonCallUs.astro";
 //import Badge from "~/components/Badge.astro";
 
@@ -18,10 +18,10 @@ import itSupport from "~/assets/img/it-support.jpg";
 import webDeveloper from "~/assets/img/web-developer.jpg";
 import photographyMedia from "~/assets/img/photography-media.jpg";
 // Image to remplace
-import PizzaHero from "~/assets/images/pizza-hero.png";
-import reviewAuthors from "~/assets/images/review-authors.png";
-import Mussels from "~/assets/images/mussels2.png";
-import Dessert from "~/assets/images/dessert.png";
+// import PizzaHero from "~/assets/images/pizza-hero.png";
+// import reviewAuthors from "~/assets/images/review-authors.png";
+// import Mussels from "~/assets/images/mussels2.png";
+import newsletter from "~/assets/images/gallery/together.jpg";
 ---
 
 <Layout
@@ -47,7 +47,7 @@ import Dessert from "~/assets/images/dessert.png";
 
   <WideImage
     image={slide}
-    alt="Just an image"
+    alt="Group of friends helping people"
     class:list={"aspect-video lg:aspect-[16/6]"}
   />
 
@@ -242,69 +242,23 @@ import Dessert from "~/assets/images/dessert.png";
     <Hero>
       <div slot="hero-content-left" class="prose max-w-none order-2">
         <h2 slot="heading-title" class="font-black text-brand-green h2 !my-4">
-          Desserts
+          newsletter sign-up
         </h2>
         <div slot="heading-content">
           <p>
-            Indulge in our selection of sweet treats, from classic tiramisu to
-            decadent chocolate cake. Our desserts are the perfect way to end
-            your meal on a high note.
+            Subscribe to our newsletter to receive exclusive content and the latest updates directly in your inbox. To subscribe, simply fill out the form below with your email address, and you will receive regular updates, news, and special offers directly from our experts. Join our community today! 
           </p>
 
-          <p>
-            Experience the taste of Italy with our authentic dishes made from
-            the finest ingredients. Indulge in our wide variety of pizzas,
-            pastas, and desserts, all crafted with love and tradition. Whether
-            you're dining in or taking out, we promise a memorable culinary
-            experience.
-          </p>
-
-          <div class="mt-8">
+          <!-- <div class="mt-8">
             <Button url="/menu">See our menu</Button>
-          </div>
+          </div> -->
         </div>
       </div>
 
       <div slot="hero-content-right">
         <Picture
           class:list={"mx-auto"}
-          src={Dessert}
-          height={600}
-          formats={["avif", "webp"]}
-          alt="A description of my image."
-        />
-      </div>
-    </Hero>
-  </Section>
-
-  <!-- Contact -->
-  <Section class:list={"bg-white"}>
-    <Hero>
-      <div slot="hero-content-left" class="prose max-w-none">
-        <h2 slot="heading-title" class="font-black text-brand-red h2 !my-4">
-          Drop by and say hello
-        </h2>
-        <div slot="heading-content">
-          <p>
-            We're located in the heart of the city, just a stone's throw away
-            from the main square. Our restaurant is the perfect place to enjoy a
-            delicious meal with friends and family.
-          </p>
-
-          <span class="text-brand-red font-medium">
-            ✔ We also do take-away, so you can enjoy your food at home
-          </span>
-
-          <div class="mt-8">
-            <Button color="red" url="/book">Book a table</Button>
-          </div>
-        </div>
-      </div>
-
-      <div slot="hero-content-right">
-        <Picture
-          class:list={"mx-auto"}
-          src={Dessert}
+          src={newsletter}
           height={600}
           formats={["avif", "webp"]}
           alt="A description of my image."
