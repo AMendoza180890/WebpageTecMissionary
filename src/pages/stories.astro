@@ -4,6 +4,7 @@ import Section from "~/components/Section.astro";
 import Heading from "~/components/Heading.astro";
 import { Picture } from "astro:assets";
 import { getCollection } from "astro:content";
+import Newsletter from "~/components/Newsletter.astro";
 
 const gallery = await getCollection("gallery");
 ---
@@ -17,7 +18,7 @@ const gallery = await getCollection("gallery");
 			</p>
 		</Heading>
 	</Section>
-	<div class="masonry-grid grid grid-cols-2 lg:grid-cols-3 pb-16 lg:pb-32">
+	<!-- <div class="masonry-grid grid grid-cols-2 lg:grid-cols-3 pb-16 lg:pb-32">
 		{
 			gallery.map((item, index) => (
 				<div class="masonry-grid-item">
@@ -33,7 +34,8 @@ const gallery = await getCollection("gallery");
 				</div>
 			))
 		}
-	</div>
+	</div> -->
+	<Newsletter/>
 </Layout>
 
 <script>
