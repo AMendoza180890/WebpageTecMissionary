@@ -7,19 +7,20 @@ import { Picture, Image } from "astro:assets";
 import Grid from "~/components/Grid.astro";
 import Heading from "~/components/Heading.astro";
 import WideImage from "~/components/WideImage.astro";
+import Newsletter from "~/components/Newsletter.astro";
 
 // Images
 import slide from "~/assets/img/group-friends-planning-trip-cafe.jpg";
 import itSupport from "~/assets/img/it-support.jpg";
 import webDeveloper from "~/assets/img/web-developer.jpg";
 import photographyMedia from "~/assets/img/photography-media.jpg";
-import newsletter from "~/assets/images/gallery/together.jpg";
 
 // Todos los elementos comentados
+// import newsletter from "~/assets/images/gallery/together.jpg";
 // import Button from "~/components/Button.astro";
 // import ReviewSlider from "~/components/ReviewSlider.astro";
-//import ButtonCallUs from "~/components/ButtonCallUs.astro";
-//import Badge from "~/components/Badge.astro";
+// import ButtonCallUs from "~/components/ButtonCallUs.astro";
+// import Badge from "~/components/Badge.astro";
 // Image to remplace
 // import PizzaHero from "~/assets/images/pizza-hero.png";
 // import reviewAuthors from "~/assets/images/review-authors.png";
@@ -238,9 +239,11 @@ import newsletter from "~/assets/images/gallery/together.jpg";
       ></path>
     </svg>
   </Section>
+  
 
+  <Section class:list={"container py-1 lg:py-1"} contain={false}>
   <!-- Desserts -->
-  <Section class:list={"bg-white"}>
+  <!--< class:list={"bg-white"}>
     <Hero>
       <div slot="hero-content-left" class="prose max-w-none order-2">
         <h2 slot="heading-title" class="font-black text-brand-green h2 !my-4">
@@ -251,9 +254,9 @@ import newsletter from "~/assets/images/gallery/together.jpg";
             Subscribe to our newsletter to receive exclusive content and the latest updates directly in your inbox. To subscribe, simply fill out the form below with your email address, and you will receive regular updates, news, and special offers directly from our experts. Join our community today!
           </p>
 
-          <!-- <div class="mt-8">
+          <div class="mt-8">
             <Button url="/menu">See our menu</Button>
-          </div> -->
+          </div>
         </div>
       </div>
 
@@ -264,9 +267,10 @@ import newsletter from "~/assets/images/gallery/together.jpg";
           height={600}
           formats={["avif", "webp"]}
           alt="A description of my image."
-        />
+        /><
       </div>
-    </Hero>
+    </Hero> -->
+    <Newsletter />
   </Section>
 </Layout>
 

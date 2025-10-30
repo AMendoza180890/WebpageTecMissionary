@@ -1,0 +1,82 @@
+---
+
+---
+
+<div class="container py-10 lg:py-10">
+  <div class="bg-white">
+    <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-prose text-center">
+        <h2 class="text-2xl font-semibold text-brand-green sm:text-3xl">
+          Sign up for our newsletter
+        </h2>
+
+        <p class="mt-4 text-gray-700">
+          Subscribe to our newsletter to receive exclusive content and the
+          latest updates directly in your inbox. To subscribe, simply fill out
+          the form below with your email address, and you will receive regular
+          updates, news, and special offers directly from our experts. Join our
+          community today!
+        </p>
+      </div>
+
+      <form
+        id="newsletter-form"
+        class="mx-auto mt-6 flex max-w-xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-center"
+      >
+        <label for="email" class="flex-1">
+          <span class="sr-only"> Email </span>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            class="h-12 w-full rounded border-gray-300 shadow-sm"
+          />
+        </label>
+        <p id="message"></p>
+        <button
+          type="submit"
+          class="transition h-12 rounded-sm border border-brand-green bg-brand-green px-12 py-3 text-sm font-medium hover:bg-transparent text-white hover:text-brand-green focus:ring-3 focus:outline-hidden"
+        >
+          Sign Up
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  const form = document.querySelector("#newsletter-form") as HTMLFormElement;
+  const message = document.querySelector("#message") as HTMLParagraphElement;
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const email = formData.get("email");
+
+    try {
+      const resp = await fetch("/api/suscribe", {
+        method: "POST",
+        headers: {
+          accept: "application/json",
+          "content-type": "application/json"
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await resp.json();
+
+      if (resp.ok) {
+        message.textContent = "Subscription successful!";
+        form.reset();
+      } else {
+        message.textContent = data.error || "Something went wrong";
+      }
+    } catch (err) {
+      message.textContent = "Network error. Try again later." + err;
+      console.log(err);
+    }
+  });
+</script>

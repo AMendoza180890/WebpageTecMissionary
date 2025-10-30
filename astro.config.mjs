@@ -27,6 +27,7 @@ export default defineConfig({
 
   vite: {
       plugins: [tailwindcss()],
+      envPrefix: ['BREVO_']
     },
 
 });

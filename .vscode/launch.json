@@ -2,10 +2,25 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "command": "./node_modules/.bin/astro dev",
-      "name": "Development server",
+      "name": "Debug Astro Dev Server",
+      "type": "node",
       "request": "launch",
-      "type": "node-terminal"
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "skipFiles": ["<node_internals>/**"],
+      "console": "integratedTerminal",
+      "env": {
+        "NODE_OPTIONS": "--inspect"
+      }
     }
   ]
+  // "version": "0.2.0",
+  // "configurations": [
+  //   {
+  //     "command": "./node_modules/.bin/astro dev",
+  //     "name": "Development server",
+  //     "request": "launch",
+  //     "type": "node-terminal"
+  //   }
+  // ]
 }
