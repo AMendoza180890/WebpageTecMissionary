@@ -1,17 +1,10 @@
 ---
 import { actions } from "astro:actions";
 
-//const result = Astro.getActionResult(actions.send);
-// if (result?.data) {
-//     Astro.redirect("/");
-// }
-
-// if (result?.error){
-//     console.error("Action Error:", result.error);
-// }
+// const result = Astro.getActionResult(actions.send);
 ---
 
-<form action={actions.send} method="post">
+<form action={actions.send} method="POST">
   <div class="flex flex-col gap-8 mx-auto max-w-md">
     <div>
       <label for="name">Name</label>
@@ -61,16 +54,3 @@ import { actions } from "astro:actions";
     </div>
   </div>
 </form>
-
-<script>
-  import { actions } from "astro:actions";
-
-  const result = Astro.getActionResult(actions.send);
-  if (result?.data) {
-    Astro.redirect("/");
-  }
-
-  if (result?.error) {
-    console.error("Action Error:", result.error);
-  }
-</script>
